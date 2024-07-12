@@ -8,15 +8,20 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "start-server-and-test": "^2.0.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "serve": "^14.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cy:run"
   },
   "eslintConfig": {
     "extends": [
@@ -41,12 +46,5 @@
     "@testing-library/react": "^16.0.0",
     "cypress": "^13.13.0",
     "tailwindcss": "^3.4.4"
-  },
-  "scripts": {
-  "start": "your-server-start-command",
-  "cy:run": "cypress run",
-  "cy:open": "cypress open",
-  "test": "start-server-and-test start http://localhost:3000 cy:run"
-}
-
+  }
 }
